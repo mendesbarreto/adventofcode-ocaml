@@ -1,4 +1,4 @@
-let read_file file_name = 
+let read_file file_name =
   let in_channel = open_in file_name in 
   try 
     let length = in_channel_length in_channel in 
@@ -23,7 +23,6 @@ let rec find_floor list floor =
 
 let () = let content = read_file "input.text" in 
   let chars = content |> String.to_seq |> List.of_seq in
-  let chars_length = List.length chars in
   let floor = find_floor chars 0 in
-  Printf.printf "The lenght string: %d\n and the floor selected is: %d" chars_length floor 
+  Printf.printf "\nThe floor selected is: %d" floor 
 
